@@ -1,0 +1,4 @@
+{
+  "extends": ["stylelint-config-recommended-scss","stylelint-config-property-sort-order-smacss", "stylelint-config-recess-order"],
+  "rules": {}
+}

@@ -1,0 +1,91 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 2rem;
+  margin: 0;
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: $primario;
+  background-color: $secundario;
+}
+
+.container {
+  max-width: 800px;
+  padding: 2rem;
+  margin: auto;
+  text-align: justify;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  .imagenes {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.uoc-logo {
+  display: block;
+  max-width: 200px;
+  height: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  @media (min-width: $mqMinWidth) {
+    max-width: none;
+  }
+}
+
+.uoc-title {
+  font-family: $font-family-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color:$primario;
+  
+  @media (min-width: $mqMinWidth) {
+    font-size: 36px;
+  }
+}
+
+.uoc-footer {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+.tarjeta {
+  margin-bottom: 20px; // Espacio entre las tarjetas
+  text-align: center;
+  background-color: $secundario;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  table {
+    display: inline-block;
+  }
+}
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  .tarjeta {
+    width: 48%; 
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .tarjetas {
+    flex-wrap: wrap-reverse; // Para que los elementos no se ajusten automáticamente y se mantengan en una sola fila
+    .tarjeta {
+      width: 100%; // Ancho completo para que cada tarjeta ocupe toda la fila
+      margin-bottom: 15px; // Eliminar el espacio entre las tarjetas
+      text-align: center;
+    }
+  }
+}
